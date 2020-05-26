@@ -11,9 +11,9 @@ $this->skyforms = $this->getServer()->getPluginManager()->getPlugin("SkyForms");
 
 ### Creating Modal Form:
 ```php
-$formTitle = "Título do formulário";
+$formTitle = "Modal title";
 $formContent = "Modal content (usually a question).";
-$btnYes = "Yes" // Positive button text (optional)
+$btnYes = "Yes"; // Positive button text (optional)
 $btnNo = "No"; // Negative button text (optional)
 $form = $this->skyforms->createModalForm($formTitle, $formContent, $btnYes, $btnNo);
 
@@ -21,9 +21,9 @@ $form->sendTo($player, function($response) use (&$player){
   // Yes button results in (bool)$response = true
   // No button results in (bool)$response = false
   if($response){
-    $player->sendMessage("You choose YES");
+    $player->sendMessage("You chose YES");
   }else{
-    $player->sendMessage("You choose NO");
+    $player->sendMessage("You chose NO");
   }
 });
 ```
