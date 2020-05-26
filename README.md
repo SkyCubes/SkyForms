@@ -54,3 +54,24 @@ $form->sendTo($player, function($response) use (&$player){ // Where '$player' is
 });
 ```
 ![Menu Form](menu_form_screenshot.jpg)
+
+### Creating Custom Form
+```php
+$formTitle = "This is a custom form";
+$form = $this->skyforms->createCustomForm($formTitle);
+// Custom form elements are created from functions
+
+$form->addLabel("§bThis is free a label");
+$form->addInput("§aThis is the input label");
+$form->addToggle("This is a toggle", false); // bool in 2nd param to make it checked or not
+
+// StepSliders returns value with array key, so create a array to translate it to text value
+$options = array("Option 1", "Option 2");
+$form->addStepSlider("Chose one", $options);
+
+$form->sendTo($player, function($response) use (&$player, &$options){ // refer variables to use in Closure
+  $player->sendMessage("§aInput: §e". $response['§aThis is the input label']); // if the input was created with colors, then use colors to get the result
+  $player->sendMessage("§aToggle: §e". ($response['This is a toggle'] ? "Check" : "Uncheck"));
+  $player->sendMessage("§aStepSlider: §e". $options[$response['Chose one']]); // array key to value
+});
+```
