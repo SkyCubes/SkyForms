@@ -44,8 +44,8 @@ class CustomForm{
 			function(Player $player, CustomFormResponse $data) use (&$execute):void{
 				$response = array();
 				$data = $data->getElements();
-				foreach($data as $dataResponse){
-					$response[$dataResponse->getText()] = $dataResponse->getValue();
+				foreach($data as $element){
+					$response[$element->getText()] = $element->getValue();
 				}
 				$execute($response);
 			}));
