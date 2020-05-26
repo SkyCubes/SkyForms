@@ -75,3 +75,5 @@ $form->sendTo($player, function($response) use (&$player, &$options){ // refer v
   $player->sendMessage("§aStepSlider: §e". $options[$response['Chose one']]); // array key to value
 });
 ```
+![Custom Form](custom_form_screenshot.jpg)
+![Custom Form Results](custom_form_result_screenshot.jpg)
