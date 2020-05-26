@@ -27,4 +27,4 @@ $form->sendTo($player, function($response) use (&$player){
   }
 });
 ```
-### Result:
+![Modal Form](modal_form_screenshot.jpg)
