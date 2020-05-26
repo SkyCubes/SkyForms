@@ -1,0 +1,6 @@
+name: SkyForms
+version: 1.0.0
+author: MAVBEDEV
+api: 3.0.0
+main: skycubes\skyforms\SkyForms
+description: Form API to SkyCubes
