@@ -78,4 +78,4 @@ $form->sendTo($player, function($response) use (&$player, &$options){ // refer v
 ![Custom Form](custom_form_screenshot.jpg)
 ![Custom Form Results](custom_form_result_screenshot.jpg)
 
-##### This plugin use [Frago's EasyForm code base](https://github.com/Frago9876543210/EasyForms)
+##### This plugin use [Frago9876543210's EasyForm code base](https://github.com/Frago9876543210/EasyForms)
